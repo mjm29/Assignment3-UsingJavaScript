@@ -136,15 +136,12 @@ h2{
 p{
     margin-bottom: 12px;
 }
-.fake-button{
+.fake-button.large-text{
     width: 250px;
     text-align: center;
+    margin-left: 150px;
 }
 
-.index-buttons{
-    padding: 0px 150px;
-    gap: 150px
-}
 
 
 
@@ -193,7 +190,7 @@ p{
 
 #clear-button{
     width: 200px;
-    
+    text-align: center;
 }
 .clicked{
     background-color: var(--primary-color);
