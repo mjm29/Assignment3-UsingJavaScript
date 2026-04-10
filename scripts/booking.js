@@ -2,21 +2,39 @@
 // useful variables might be: the cost per day, the number of days selected, and elements on the screen that will be clicked or will need to be modified. 
 // Do any of these variables need to be initialized when the page is loaded? 
 // When do they need to be reset or updated?
-
-
+let numDaysSelected = 0;
+const days = document.querySelectorAll("li")
+const totalCost = document.getElementById("calculated-cost");
+const clearDays = document.getElementById("clear-button");
 
 
 /********* colour change days of week *********/
 // when the day buttons are clicked, we will apply the "clicked" class to that element, and update any other relevant variables. Then, we can recalculate the total cost.
 // added challenge: don't update the dayCounter if the same day is clicked more than once. hint: .classList.contains() might be helpful here!
-
+function clickDay(){
+  if (!this.classList.contains("clicked")) {
+    numDaysSelected += 1;
+    this.classList.add("clicked");
+    console.log(numDaysSelected);
+  }
+}
+days.forEach(day => {
+  day.addEventListener("click", clickDay)
+})
 
 
 
 
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
-
+function reset(){
+  days.forEach(day => {
+    day.classList.remove('clicked');
+    totalCost.textContent = 0;
+  })
+  numDaysSelected = 0;
+}
+clearDays.addEventListener("click", reset);
 
 
 
