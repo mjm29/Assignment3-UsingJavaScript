@@ -1,4 +1,4 @@
-/************* your name: 
+/************* your name: Marc Joseph Millare
 
 INSTRUCTIONS:
 Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations. 
@@ -112,6 +112,7 @@ footer{
     height: 60px;
     font-weight: 200;
     text-align: center;
+    padding-top: 12px;
 }
 
 
