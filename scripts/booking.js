@@ -4,7 +4,7 @@
 // When do they need to be reset or updated?
 let numDaysSelected = 0;
 let dailyRate = 35;
-const days = document.querySelectorAll("li")
+const days = document.querySelectorAll("li");
 const totalCost = document.getElementById("calculated-cost");
 const clearDays = document.getElementById("clear-button");
 const halfDay = document.getElementById("half");
@@ -22,8 +22,8 @@ function clickDay(){
   }
 }
 days.forEach(day => {
-  day.addEventListener("click", clickDay)
-})
+  day.addEventListener("click", clickDay);
+});
 
 
 
@@ -34,7 +34,7 @@ function reset(){
   days.forEach(day => {
     day.classList.remove('clicked');
     totalCost.textContent = 0;
-  })
+  });
   numDaysSelected = 0;
 }
 clearDays.addEventListener("click", reset);
